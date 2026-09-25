@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>be.pa-pri-ka</groupId>
 	<artifactId>Rube-Goldberg-Portofolio</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>Rube Goldberg Portofolio</name>
 	<url>https://github.com/pa-pri-ka/Rube-Goldberg-Portfolio</url>
