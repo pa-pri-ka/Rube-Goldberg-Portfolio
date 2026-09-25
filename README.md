@@ -16,7 +16,7 @@ The idea is to use all... well as many technologies as I've worked with. The rea
 
 - maven
 - Spring Initializr (I kid you not)
-- Spring Boot
+- Spring Boot 4.1.1
 ...
 
 (more to come, obviously)
