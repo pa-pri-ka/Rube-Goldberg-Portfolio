@@ -1,6 +1,9 @@
 # IntelliJ
 /.idea/
 
+# Maven
+.mvn
+
 # Compiled class file
 *.class
 
