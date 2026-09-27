@@ -1,8 +1,8 @@
 # IntelliJ
-/.idea/
+/.idea
 
 # Maven
-../.mvn
+/.mvn
 
 # Compiled class file
 *.class
@@ -30,4 +30,3 @@ hs_err_pid*
 replay_pid*
 
 /main-module/target/
-/.mvn/wrapper/maven-wrapper.properties
