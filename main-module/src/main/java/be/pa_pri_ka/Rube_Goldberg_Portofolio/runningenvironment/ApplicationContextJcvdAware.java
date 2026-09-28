@@ -23,8 +23,9 @@ public class ApplicationContextJcvdAware implements ApplicationContextAware {
 	public void logExistingBeans() {
 		System.out.println(">>> BEANS");
 		System.out.println("Beans count: " + this.applicationContext.getBeanDefinitionCount());
+
 		final String[] beanDefinitionNames = this.applicationContext.getBeanDefinitionNames();
-		System.out.println("Bean definition names: ");
-		Arrays.stream(beanDefinitionNames).forEach(System.out::println);
+		Arrays.stream(beanDefinitionNames).filter(name -> !name.contains(".")).sorted().forEach(System.out::println);
+		Arrays.stream(beanDefinitionNames).filter(name -> name.contains(".")).sorted().forEach(System.out::println);
 	}
 }
