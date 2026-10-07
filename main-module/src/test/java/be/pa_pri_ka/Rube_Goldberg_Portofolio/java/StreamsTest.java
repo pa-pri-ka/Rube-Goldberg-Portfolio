@@ -9,7 +9,7 @@ class StreamsTest {
 
 	private final Streams streams = new Streams();
 
-	private final Object[] anArray = new Object[]{
+	private final Object[] anArray = {
 			new String("abc"),
 			(short) 507,
 			new StringBuilder("building...")};

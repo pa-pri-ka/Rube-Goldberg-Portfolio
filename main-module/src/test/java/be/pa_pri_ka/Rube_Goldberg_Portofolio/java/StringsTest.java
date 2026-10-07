@@ -33,4 +33,10 @@ class StringsTest {
 		assertTrue(strings.areEqual(s1, buildString));
 		assertTrue(strings.haveTheSameReference(s2, buildString.intern()));
 	}
+
+	@Test
+	void repeatsATextLineThreeTimes() {
+		String result = strings.repeatThrice("Hello\nWorld\n \n");
+		assertEquals("I'm gonna say this only thrice: HelloHelloHello|I'm gonna say this only thrice: WorldWorldWorld|404: could not find a non-blank line", result );
+	}
 }
