@@ -12,4 +12,12 @@ class PatternMatching {
 		}
 		return "I don't know this one in particular: " + object.getClass().getSimpleName();
 	}
+
+	String getRange(Number number) {
+		return switch (number) {
+			case Integer n -> "This integer is between " + (n - 1) + " and " + (n + 1);
+			case Double n -> "This double is between " + (n - 1.0) + " and " + (n + 1.0);
+			default -> "Listen, I need an Integer or a Double";
+		};
+	}
 }
