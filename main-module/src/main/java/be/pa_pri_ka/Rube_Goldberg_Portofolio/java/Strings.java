@@ -1,4 +1,4 @@
-package be.pa_pri_ka.Rube_Goldberg_Portofolio.purejava;
+package be.pa_pri_ka.Rube_Goldberg_Portofolio.java;
 
 import java.util.Objects;
 
