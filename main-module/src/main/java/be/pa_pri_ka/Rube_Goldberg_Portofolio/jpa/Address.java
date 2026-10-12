@@ -27,7 +27,7 @@ public class Address {
 	@NotNull
 	private Short number;
 
-	@Length(max = 3)
+	@Length(max = 10)
 	private String postbox;
 
 	@Length(max = 128)

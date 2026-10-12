@@ -4,17 +4,59 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class CompanyTransactions {
+class CompanyTransactions {
 
-	private final CompanyDAO companyDAO;
+	private final CompanyJpaOnlyRepository companyJpaOnlyRepository;
 
-	/** @noinspection ClassEscapesDefinedScope*/
-	public CompanyTransactions(CompanyDAO companyDAO) {
-		this.companyDAO = companyDAO;
+	CompanyTransactions(CompanyJpaOnlyRepository companyJpaOnlyRepository) {
+		this.companyJpaOnlyRepository = companyJpaOnlyRepository;
+	}
+
+	// ENTITY MANAGER
+
+	@Transactional
+	public Long addCompanyUsingEm(Company company) {
+		return companyJpaOnlyRepository.addUsingEm(company);
 	}
 
 	@Transactional
-	public void add(Company company) {
-		companyDAO.add(company);
+	public Company findCompanyByIdUsingEm(Long id) {
+		return companyJpaOnlyRepository.findByIdUsingEm(id);
 	}
+
+	@Transactional
+	public Company updateCompanyUsingEm(Company company) {
+		return companyJpaOnlyRepository.updateCompanyUsingEm(company);
+	}
+
+	@Transactional
+	public void deleteCompanyUsingEm(Company company) {
+		companyJpaOnlyRepository.deleteCompanyUsingEm(company);
+	}
+
+	// JPQL
+
+	@Transactional
+	public void addCompanyUsingJpql(Company company) {
+//		companyJpaOnlyRepository.addUsingEm(company);
+	}
+
+	@Transactional
+	public void findCompanyByNameUsingJpql(String companyName) {
+	}
+
+	@Transactional
+	public void updateCompanyUsingJpql(Company company) {
+	}
+
+	@Transactional
+	public void deleteCompanyUsingJpql(Company company) {
+	}
+
+	@Transactional
+	public void addCompanyUsingCriteria(Company company) {
+		//		companyJpaOnlyRepository.addUsingEm(company);
+	}
+
+
 }

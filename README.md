@@ -17,6 +17,7 @@ The idea is to use all... well as many technologies as I've worked with. The rea
 - maven 3
 - Spring Initializr (I kid you not)
 - Spring Boot 4
+- Spring Data JPA 4
 - Spring Framework 7
 ...
 

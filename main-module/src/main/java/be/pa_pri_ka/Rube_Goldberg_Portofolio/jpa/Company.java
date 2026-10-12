@@ -12,7 +12,7 @@ public class Company {
 	@NotNull
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
 	@JoinColumn(name = "address_id")
 	private Address address;
 

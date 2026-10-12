@@ -3,7 +3,7 @@ create table address (
     city varchar(128) not null,
     country varchar(128) not null,
     number smallint not null,
-    postbox varchar(3),
+    postbox varchar(10),
     street varchar(128) not null,
     zipcode varchar(16) not null
 );
