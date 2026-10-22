@@ -20,6 +20,7 @@
 		</license>
 	</licenses>
 	<modules>
-		<module>main-module</module>
+		<module>kukado-vun</module>
+		<module>spongepost-hibejap</module>
 	</modules>
 </project>

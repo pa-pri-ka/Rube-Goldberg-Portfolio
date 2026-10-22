@@ -12,7 +12,7 @@ The idea is to use all... well as many technologies as I've worked with. The rea
 
 # Tech Stack
 
-(as if a 20+ dev was just as good as a tech stack)
+(as if a 20+ dev was just a list of tech)
 
 - maven 3
 - Spring Initializr (I kid you not)

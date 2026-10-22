@@ -8,7 +8,7 @@
 		<version>1.0.0</version>
 	</parent>
 	<artifactId>main-module</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<description/>
 	<licenses>
 		<license>
@@ -19,6 +19,7 @@
 
 	<properties>
 		<java.version>21</java.version>
+		<logback.version>1.6.3</logback.version>
 	</properties>
 
 	<dependencies>
