@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.test.jdbc.JdbcTestUtils;
 
@@ -35,8 +34,6 @@ class CompanyTransactionsITest {
 	private CompanyTransactions companyTransactions;
 	@Autowired
 	private JdbcClient jdbcClient;
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
 
 	@BeforeEach
 	void setUp() {
@@ -107,6 +104,22 @@ class CompanyTransactionsITest {
 
 			assertThat(JdbcTestUtils.countRowsInTable(jdbcClient, COMPANY_DB_TABLE)).isEqualTo(0);
 			assertThat(JdbcTestUtils.countRowsInTable(jdbcClient, ADDRESS_DB_TABLE)).isEqualTo(0);
+		}
+	}
+
+	@Nested
+	class WhenUsingCriteria {
+
+		@Test
+		void findCompanyByNameUsingCriteria() {
+			Company company = buildCompany();
+			company.setAddress(buildAddress());
+			companyTransactions.addCompanyUsingEm(company);
+
+			Company companyFound = companyTransactions.findCompanyByNameUsingCriteria(COMPANY_NAME);
+
+			assertThat(companyFound).isNotNull();
+			// TODO continue here...
 		}
 	}
 

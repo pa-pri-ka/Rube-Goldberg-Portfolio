@@ -34,6 +34,12 @@ class CompanyTransactions {
 		companyJpaOnlyRepository.deleteCompanyUsingEm(company);
 	}
 
+	// CRITERIA
+	@Transactional
+	public Company findCompanyByNameUsingCriteria(String name) {
+		return companyJpaOnlyRepository.findByNameUsingCriteria(name);
+	}
+
 	// JPQL
 
 	@Transactional
@@ -52,11 +58,4 @@ class CompanyTransactions {
 	@Transactional
 	public void deleteCompanyUsingJpql(Company company) {
 	}
-
-	@Transactional
-	public void addCompanyUsingCriteria(Company company) {
-		//		companyJpaOnlyRepository.addUsingEm(company);
-	}
-
-
 }
