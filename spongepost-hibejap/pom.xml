@@ -9,7 +9,12 @@
 	</parent>
 	<artifactId>spongepost-hibejap</artifactId>
 	<version>0.0.1</version>
-	<description/>
+	<description>
+		Spring Boot Data JPA
+		Hibernate
+		OpenAPI
+		PostgreSQL running in a Docker
+	</description>
 	<licenses>
 		<license>
 			<name>Apache-2.0 license</name>
@@ -17,21 +22,37 @@
 		</license>
 	</licenses>
 
-	<properties>
-		<java.version>21</java.version>
-		<logback.version>1.6.3</logback.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-docker-compose</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-restclient-test</artifactId>
 		</dependency>
 	</dependencies>
 
