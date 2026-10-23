@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:19rc1-trixie
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_USER=spongepost'
+      - 'POSTGRES_PASSWORD=o0unU8DwfJyx9f'
+      - 'POSTGRES_DB=hibejap'
+      - 'POSTGRES_INITDB_ARGS="--encoding=UTF8"'
+
+
