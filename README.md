@@ -15,6 +15,7 @@ The idea is to use all... well as many technologies as I've worked with. The rea
 (as if a 20+ dev was just a list of tech)
 
 - maven 3
+- React
 - Spring Initializr (I kid you not)
 - Spring Boot 4
 - Spring Data JPA 4
