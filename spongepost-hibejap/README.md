@@ -8,5 +8,6 @@ This application is using:
 - Springdoc OpenAPI
 - React with
   - React Router
+  - React Bootstrap
 
 Just play around and have fun!
