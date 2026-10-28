@@ -14,6 +14,6 @@ public class RootApi {
 
 	@GetMapping(path = "/hi", produces = TEXT_PLAIN_VALUE)
 	public String hi() {
-		return "yo";
+		return "hello";
 	}
 }

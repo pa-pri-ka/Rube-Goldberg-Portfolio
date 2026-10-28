@@ -12,8 +12,11 @@ import org.springframework.test.web.servlet.client.RestTestClient;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class RootApiTest {
 
+	/** @noinspection TestMethodWithoutAssertion*/
 	@Test
 	void returnsHi(@Autowired RestTestClient restClient) {
-		restClient.get().uri("/api/hi").exchange().expectStatus().isOk();
+		restClient.get().uri("/api/hi").exchange()
+				.expectStatus().isOk()
+				.expectBody(String.class).isEqualTo("hello");
 	}
 }
