@@ -1,7 +1,7 @@
 import {Alert, AlertHeading, Col, Container, Row, Stack} from "react-bootstrap";
 
 export function TechStackContainer() {
-	const itemClasses = 'rounded-pill rounded border-dark-subtle bg-dark text-primary p-2';
+	const itemClasses = 'rounded-pill border-dark-subtle bg-dark text-primary p-2';
 
 	return <Container fluid>
 		<Row className={'mt-4'}>

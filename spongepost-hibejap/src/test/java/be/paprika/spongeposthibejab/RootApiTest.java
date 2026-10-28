@@ -17,6 +17,6 @@ class RootApiTest {
 	void returnsHi(@Autowired RestTestClient restClient) {
 		restClient.get().uri("/api/hi").exchange()
 				.expectStatus().isOk()
-				.expectBody(String.class).isEqualTo("hello");
+				.expectBody(String.class).isEqualTo("Ahoy!");
 	}
 }
