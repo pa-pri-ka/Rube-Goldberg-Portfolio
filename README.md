@@ -12,14 +12,15 @@ The idea is to use all... well as many technologies as I've worked with. The rea
 
 # Tech Stack
 
-(as if a 20+ dev was just a list of tech)
+(as if a 20+ experienced dev was reduced to a list of tech)
 
 - maven 3
-- React
+- React 19
+- React Router 8
 - Spring Initializr (I kid you not)
 - Spring Boot 4
-- Spring Data JPA 4
+  - Spring Boot Data JPA
+  - Spring Boot Web
 - Spring Framework 7
-...
-
-(more to come, obviously)
+- Springdoc OpenAPI 3
+- ... (more to come, obviously)
