@@ -16,6 +16,7 @@ The idea is to use all... well as many technologies as I've worked with. The rea
 
 - maven 3
 - React 19
+- React Bootstrap 2
 - React Router 8
 - Spring Initializr (I kid you not)
 - Spring Boot 4
