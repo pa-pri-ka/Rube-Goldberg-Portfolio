@@ -7,7 +7,7 @@ export function TechStackContainer() {
 		<Row className={'mt-4'}>
 			<Col>
 				<Alert variant={'secondary'}>
-					<AlertHeading>Featuring</AlertHeading>
+					<AlertHeading className={'small'}>Featuring</AlertHeading>
 					<Stack direction={'horizontal'} gap={2} className={'flex-wrap'}>
 						<div className={itemClasses}>Spring Boot</div>
 						<div className={itemClasses}>Spring Boot Web</div>

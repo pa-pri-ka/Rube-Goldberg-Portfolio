@@ -38,7 +38,7 @@ export function SayHiContainer() {
 							</Col>
 							<Col>
 								<Form>
-									<Form.Label>Spongepost's responses:</Form.Label>
+									<Form.Label>Spongepost's response:</Form.Label>
 									<Form.Group controlId={'sayHiResponse'}>
 										<Form.Control as={'textarea'} value={spongepostText} readOnly />
 									</Form.Group>
