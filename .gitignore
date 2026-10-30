@@ -30,6 +30,7 @@
 hs_err_pid*
 replay_pid*
 
-/main-module/target/
-/spongepost-hibejap/target/classes/application.properties
-/spongepost-hibejap/target/test-classes/application.properties
+# Java target folders
+/main-module/target/**
+/spongepost-hibejap/target/**
+/spongepost-hibejap.iml

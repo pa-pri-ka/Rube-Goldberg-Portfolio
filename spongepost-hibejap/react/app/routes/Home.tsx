@@ -1,7 +1,8 @@
-import type {Route} from "./+types/home";
+import type {Route} from "./+types/Home";
 import {HeaderContainer} from "~/layout/HeaderContainer";
 import {TechStackContainer} from "~/layout/TechStackContainer";
 import {SayHiContainer} from "~/say_hi/SayHiContainer";
+import {FooterContainer} from "~/layout/FooterContainer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,5 +16,6 @@ export default function Home() {
     <HeaderContainer />
     <TechStackContainer />
     <SayHiContainer />
+    <FooterContainer />
   </>
 }
