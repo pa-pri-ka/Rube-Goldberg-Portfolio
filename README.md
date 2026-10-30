@@ -15,6 +15,7 @@ The idea is to use all... well as many technologies as I've worked with. The rea
 (as if a 20+ experienced dev was reduced to a list of tech)
 
 - maven 3
+- OpenAPI 3.2
 - React 19
 - React Bootstrap 2
 - React Router 8

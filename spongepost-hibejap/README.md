@@ -5,9 +5,10 @@ This application is using:
   - Data JPA
   - Docker Compose (to start the Postgres docker)
   - Web
-- Springdoc OpenAPI
 - React with
   - React Router
   - React Bootstrap
+- OpenAPI 3.2
+- Springdoc OpenAPI
 
 Just play around and have fun!
