@@ -1,6 +1,7 @@
 # IntelliJ
 /.idea
 /Rube-Goldberg-Portofolio.iml
+/spongepost-hibejap.iml
 
 # Maven
 /.mvn
@@ -33,4 +34,3 @@ replay_pid*
 # Java target folders
 /main-module/target/**
 /spongepost-hibejap/target/**
-/spongepost-hibejap.iml

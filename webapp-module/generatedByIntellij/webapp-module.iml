@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/css" />
       <excludeFolder url="file://$MODULE_DIR$/img" />
       <excludeFolder url="file://$MODULE_DIR$/js" />
+      <excludeFolder url="file://$MODULE_DIR$/../.react-router" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
