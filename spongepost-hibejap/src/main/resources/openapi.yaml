@@ -1,0 +1,16 @@
+openapi: 3.2.0
+info:
+  title: My OpenAPI Description
+  description: "Life's pretty good, and why wouldn't it be? I'm a pirate, after all."
+  version: 1.0.0
+paths:
+  /api/openapi:
+    get:
+      summary: Gets this document
+      responses:
+        "200":
+          description: "The OpenAPI Description document in yaml format, savvy?"
+          content:
+            text/plain:
+              schema:
+                type: string
