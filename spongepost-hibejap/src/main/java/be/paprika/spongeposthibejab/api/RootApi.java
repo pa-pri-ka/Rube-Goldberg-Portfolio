@@ -1,4 +1,4 @@
-package be.paprika.spongeposthibejab;
+package be.paprika.spongeposthibejab.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,4 +16,15 @@ public class RootApi {
 	public String hi() {
 		return "Ahoy!";
 	}
+
+
+//	public void generateStubsFromOAD() {
+//		ParseOptions options = new ParseOptions();
+//		options.setResolve(true);
+//		OpenAPI openAPI = new OpenAPIV3Parser().readContents(openApiSpec, null, options).getOpenAPI();
+//
+//		if (openAPI == null) {
+//			throw new IllegalArgumentException("Failed to parse OpenAPI spec");
+//		}
+//	}
 }
