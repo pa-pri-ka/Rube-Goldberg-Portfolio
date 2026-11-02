@@ -18,6 +18,12 @@ public class RootApiWebMvcConfigurer implements WebMvcConfigurer {
 				.allowedOrigins("http://localhost:5173")
 				.allowedMethods("GET")
 				.maxAge(MAX_AGE);
+
+		registry.addMapping("/openapi.yaml")
+				.allowedOrigins("http://localhost:5173")
+				.allowedMethods("GET")
+				.exposedHeaders()
+				.maxAge(MAX_AGE);
 	}
 }
 

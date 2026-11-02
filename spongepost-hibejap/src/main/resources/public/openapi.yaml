@@ -3,9 +3,12 @@ info:
   title: My OpenAPI Description
   description: "Life's pretty good, and why wouldn't it be? I'm a pirate, after all."
   version: 1.0.0
+tags:
+  name: "api"
 paths:
   /api/openapi:
     get:
+      tags: [api]
       summary: Gets this document
       responses:
         "200":

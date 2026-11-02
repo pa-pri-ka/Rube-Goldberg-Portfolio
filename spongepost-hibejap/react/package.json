@@ -17,7 +17,8 @@
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.8",
-    "react-router": "^8.5.0"
+    "react-router": "^8.5.0",
+    "swagger-ui-react": "^5.34.1"
   },
   "devDependencies": {
     "@react-router/dev": "^8.5.0",
@@ -25,8 +26,15 @@
     "@types/node": "^22",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
+    "@types/swagger-ui-react": "^5.18.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
     "vite": "^8.0.3"
+  },
+  "allowScripts": {
+    "@tree-sitter-grammars/tree-sitter-yaml@0.7.1": true,
+    "core-js-pure@3.51.0": true,
+    "tree-sitter@0.21.1": true,
+    "tree-sitter-json@0.24.8": true
   }
 }
