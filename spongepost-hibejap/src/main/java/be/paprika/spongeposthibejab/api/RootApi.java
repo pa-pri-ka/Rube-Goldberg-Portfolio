@@ -4,27 +4,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 import static org.springframework.util.MimeTypeUtils.TEXT_PLAIN_VALUE;
 
-/** @noinspection HardcodedFileSeparator*/
+/**
+ * @noinspection HardcodedFileSeparator
+ */
 @RestController
-@RequestMapping(path = "/api", produces = APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api")
 public class RootApi {
 
 	@GetMapping(path = "/hi", produces = TEXT_PLAIN_VALUE)
 	public String hi() {
 		return "Ahoy!";
 	}
-
-
-//	public void generateStubsFromOAD() {
-//		ParseOptions options = new ParseOptions();
-//		options.setResolve(true);
-//		OpenAPI openAPI = new OpenAPIV3Parser().readContents(openApiSpec, null, options).getOpenAPI();
-//
-//		if (openAPI == null) {
-//			throw new IllegalArgumentException("Failed to parse OpenAPI spec");
-//		}
-//	}
 }
