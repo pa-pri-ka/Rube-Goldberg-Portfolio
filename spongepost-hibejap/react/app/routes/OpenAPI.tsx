@@ -2,13 +2,11 @@ import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
 import {RGP_SERVER_URL} from "~/env";
 import axios from "axios";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Col, Container, Row, Tab, Tabs} from "react-bootstrap";
 import {AXIOS} from "~/config";
 import {HeaderContainer} from "~/layout/HeaderContainer";
 import {FooterContainer} from "~/layout/FooterContainer";
-
-let dataLoadingState: undefined | 'ongoing' | 'done' = undefined;
 
 // noinspection JSUnusedGlobalSymbols
 export default function OpenAPI() {
@@ -16,8 +14,7 @@ export default function OpenAPI() {
 	const [openApiDocument, setOpenApiDocument] = useState<string | null>();
 	const [generatedCodeDocuments, setGeneratedCodeDocuments] = useState<object | null>();
 
-	if (!dataLoadingState && dataLoadingState !== 'ongoing') {
-		dataLoadingState = 'ongoing';
+	useEffect(() => {
 		const openApiDocumentsPromise: Promise<string | null> = axios.get(`${RGP_SERVER_URL}/openapi.yaml`, {
 			responseType: 'text',
 			timeout: AXIOS.TIMEOUT,
@@ -36,10 +33,9 @@ export default function OpenAPI() {
 		]).then(([openApiDocuments, generatedCodeDocuments]) => {
 			setOpenApiDocument(openApiDocuments);
 			setGeneratedCodeDocuments(generatedCodeDocuments);
-		}).finally(() => {
-			dataLoadingState = 'done';
-		})
-	}
+		});
+	}, []);
+
 
 	const renderGenerated = () => {
 		const filePaths = Object.keys(generatedCodeDocuments as object);
