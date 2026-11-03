@@ -28,6 +28,12 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId><!-- needed by springdoc -->
+			<version>2.3.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.openapitools</groupId>
 			<artifactId>openapi-generator</artifactId>
 			<version>${openapi-generator.version}</version>
