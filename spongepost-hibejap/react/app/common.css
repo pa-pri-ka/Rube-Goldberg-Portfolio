@@ -1,0 +1,6 @@
+@import url(bootstrap_superhero.css);
+
+.link-icon-light {
+	color: var(--bs-light);
+	fill: var(--bs-light);
+}

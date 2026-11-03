@@ -5,6 +5,8 @@ import axios from "axios";
 import {useState} from "react";
 import {Col, Container, Row, Tab, Tabs} from "react-bootstrap";
 import {AXIOS} from "~/config";
+import {HeaderContainer} from "~/layout/HeaderContainer";
+import {FooterContainer} from "~/layout/FooterContainer";
 
 let dataLoadingState: undefined | 'ongoing' | 'done' = undefined;
 
@@ -60,24 +62,30 @@ export default function OpenAPI() {
 		});
 	};
 
-	return <Tabs defaultActiveKey={'reactSwaggerUiEventKey'} fill={true} id={'openApiTabsId'} justify={true}
-							 transition={true} variant={'tabs'}>
-		<Tab eventKey={'reactSwaggerUiEventKey'} title={'React Swagger UI'}>
-			<p className={'mx-3 my-3'}>React Swagger UI can be used to render any OAD document passed to it. In this example,
-				it is rendering the existing <code>openapi.yaml</code> obtained from the back end.</p>
-			{openApiDocument
-				? <SwaggerUI spec={openApiDocument}/>
-				: <p className={'mx-3 my-3'}>Fire in the hole...</p>}
-		</Tab>
-		<Tab eventKey={'openApiGeneratorEventKey'} title={'OpenAPI Generator'}>
-			<p className={'mx-3 my-3'}>Using the <code>openapi-generator</code>, the back end can generate code from an
-				existing OAD. My version even does that "in-memory", directly returning the generated documents as an API
-				response. In this example, the generator has rendered the documents below from the
-				existing <code>openapi.yaml</code> OAD.</p>
-			{generatedCodeDocuments
-				? renderGenerated()
-				: <p className={'mx-3 my-3'}>All hands ohay...</p>}
-		</Tab>
-		{/*<Tab eventKey={'springdocsEventKey'} title={'springdocs'}></Tab>*/}
-	</Tabs>;
+	return <>
+		<HeaderContainer/>
+		<hr/>
+		<Tabs defaultActiveKey={'reactSwaggerUiEventKey'} fill={false} justify={false}
+					transition={true} variant={'underline'}>
+			<Tab eventKey={'reactSwaggerUiEventKey'} title={'React Swagger UI'}>
+				<p className={'mx-3 my-3'}>React Swagger UI can be used to render any OAD document passed to it. In this example,
+					it is rendering the existing <code>openapi.yaml</code> obtained from the back end.</p>
+				{openApiDocument
+					? <SwaggerUI spec={openApiDocument}/>
+					: <p className={'mx-3 my-3'}>Fire in the hole...</p>}
+			</Tab>
+			<Tab eventKey={'openApiGeneratorEventKey'} title={'OpenAPI Generator'}>
+				<p className={'mx-3 my-3'}>Using the <code>openapi-generator</code>, the back end can generate code from an
+					existing OAD. My version even does that "in-memory", directly returning the generated documents as an API
+					response. In this example, the generator has rendered the documents below from the
+					existing <code>openapi.yaml</code> OAD.</p>
+				{generatedCodeDocuments
+					? renderGenerated()
+					: <p className={'mx-3 my-3'}>All hands ohay...</p>}
+			</Tab>
+			{/*<Tab eventKey={'springdocsEventKey'} title={'springdocs'}></Tab>*/}
+		</Tabs>
+		<hr/>
+		<FooterContainer/>
+	</>;
 }
