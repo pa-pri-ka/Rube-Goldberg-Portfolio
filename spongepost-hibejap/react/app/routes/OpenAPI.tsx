@@ -46,9 +46,9 @@ export default function OpenAPI() {
 			const filename = parts[parts.length - 1];
 			// @ts-ignore
 			const code = generatedCodeDocuments[filePath];
-			return <Container fluid className={'m-1'}>
-				<Row>
-					<Col key={filename}>
+			return <Container fluid className={'m-1'} key={`${filename}ContainerKey`}>
+				<Row key={`${filename}RowKey`}>
+					<Col key={`${filename}ColKey`}>
 						<h6>{filename}</h6>
 						<code>
 							<pre>{code}</pre>
@@ -56,7 +56,7 @@ export default function OpenAPI() {
 						<hr/>
 					</Col>
 				</Row>
-			</Container>
+			</Container>;
 		});
 	};
 
