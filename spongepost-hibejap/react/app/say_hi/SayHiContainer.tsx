@@ -2,6 +2,7 @@ import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import axios from "axios";
 import {useState} from "react";
 import {RGP_SERVER_URL} from "~/env";
+import {AXIOS} from "~/config";
 
 export function SayHiContainer() {
 
@@ -10,7 +11,8 @@ export function SayHiContainer() {
 	const sendHi = () => {
 		const url = `${RGP_SERVER_URL}/api/hi`;
 		axios.get(url, {
-			timeout: 10000
+			responseType: 'text',
+			timeout: AXIOS.TIMEOUT
 		}).then((response) => {
 			if (response.status === 200) {
 				setSpongepostText(`${spongepostText}${response.data}\n`);

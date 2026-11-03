@@ -14,7 +14,12 @@ public class RootApiWebMvcConfigurer implements WebMvcConfigurer {
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/api/hi/**")
+		registry.addMapping("/api/hi")
+				.allowedOrigins("http://localhost:5173")
+				.allowedMethods("GET")
+				.maxAge(MAX_AGE);
+
+		registry.addMapping("/api/openapi/**")
 				.allowedOrigins("http://localhost:5173")
 				.allowedMethods("GET")
 				.maxAge(MAX_AGE);
